@@ -1,0 +1,160 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:3845372014238200052",
+      "lastPropertyId": "2:8138020731242608149",
+      "name": "GameDataEntity",
+      "properties": [
+        {
+          "id": "1:5338163677717741564",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8138020731242608149",
+          "name": "ended",
+          "type": 1
+        }
+      ]
+    },
+    {
+      "id": "2:453925758108354726",
+      "lastPropertyId": "2:4378331516777437655",
+      "name": "PlayerDataEntity",
+      "properties": [
+        {
+          "id": "1:3201257791862061531",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4378331516777437655",
+          "name": "name",
+          "type": 9
+        }
+      ]
+    },
+    {
+      "id": "3:4073355140197666811",
+      "lastPropertyId": "4:3998184999420041632",
+      "name": "PlayerScoreDataEntity",
+      "properties": [
+        {
+          "id": "1:9220986911615395954",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:9221748700399110",
+          "name": "playerId",
+          "type": 6
+        },
+        {
+          "id": "3:655119892951325476",
+          "name": "scoreId",
+          "type": 6
+        },
+        {
+          "id": "4:3998184999420041632",
+          "name": "gameId",
+          "type": 6
+        }
+      ]
+    },
+    {
+      "id": "4:5144850029329589273",
+      "lastPropertyId": "14:8463352577447594035",
+      "name": "ScoreDataEntity",
+      "properties": [
+        {
+          "id": "1:8490390274471997558",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8975856314172553545",
+          "name": "one",
+          "type": 6
+        },
+        {
+          "id": "3:8754264521239405485",
+          "name": "two",
+          "type": 6
+        },
+        {
+          "id": "4:3791327398655538659",
+          "name": "three",
+          "type": 6
+        },
+        {
+          "id": "5:136589865208173024",
+          "name": "four",
+          "type": 6
+        },
+        {
+          "id": "6:1617590417158867254",
+          "name": "five",
+          "type": 6
+        },
+        {
+          "id": "7:5850930224739044883",
+          "name": "six",
+          "type": 6
+        },
+        {
+          "id": "8:5864907429327986872",
+          "name": "less",
+          "type": 6
+        },
+        {
+          "id": "9:3071260675876101510",
+          "name": "more",
+          "type": 6
+        },
+        {
+          "id": "10:1289818255600445570",
+          "name": "brelan",
+          "type": 6
+        },
+        {
+          "id": "11:3207978402235814003",
+          "name": "smallSuite",
+          "type": 6
+        },
+        {
+          "id": "12:3654289630383075248",
+          "name": "bigSuite",
+          "type": 6
+        },
+        {
+          "id": "13:2711724182446002529",
+          "name": "square",
+          "type": 6
+        },
+        {
+          "id": "14:8463352577447594035",
+          "name": "yams",
+          "type": 6
+        }
+      ]
+    }
+  ],
+  "lastEntityId": "4:5144850029329589273",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
