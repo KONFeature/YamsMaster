@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:yamsmaster/data/entities/score_data_entity.dart';
 import 'package:yamsmaster/domains/entities/player_entity.dart';
 import 'package:yamsmaster/domains/entities/score_entity.dart';
 

@@ -4,11 +4,9 @@ import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
 import 'package:get_it/get_it.dart';
 import 'package:yamsmaster/domains/entities/game_entity.dart';
 import 'package:yamsmaster/domains/repositories/game_repository.dart';
-import 'package:yamsmaster/domains/repositories/player_score_repository.dart';
 
 class GetGameUseCase extends UseCase<GameEntity, int> {
   final GameRepository _gameRepository = GetIt.I.get();
-  final PlayerScoreRepository _playerScoreRepository = GetIt.I.get();
 
   @override
   Future<Stream<GameEntity>> buildUseCaseStream(int gameId) async {

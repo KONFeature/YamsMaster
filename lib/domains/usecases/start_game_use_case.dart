@@ -4,7 +4,6 @@ import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
 import 'package:get_it/get_it.dart';
 import 'package:yamsmaster/domains/entities/game_entity.dart';
 import 'package:yamsmaster/domains/entities/player_entity.dart';
-import 'package:yamsmaster/domains/entities/player_score_entity.dart';
 import 'package:yamsmaster/domains/entities/score_entity.dart';
 import 'package:yamsmaster/domains/repositories/game_repository.dart';
 import 'package:yamsmaster/domains/repositories/player_score_repository.dart';
@@ -29,8 +28,7 @@ class StartGameUseCase extends UseCase<GameEntity, List<PlayerEntity>> {
     GameEntity game = await _gameRepository.createGame();
 
     /// Create the player score object for the game
-    List<PlayerScoreEntity> playerScores =
-        await _playerScoreRepository.createPlayersScore(scores, game.id);
+    await _playerScoreRepository.createPlayersScore(scores, game.id);
 
     // Return it
     controller.add(game);

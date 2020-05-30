@@ -50,19 +50,21 @@ class NewGamePageView extends ViewState<NewGamePage, NewGameController>
                     : Text("No players", textAlign: TextAlign.center)),
             ButtonBar(
                 alignment: MainAxisAlignment.spaceEvenly,
-                children: [newPlayerButton, startGameButton]),
+                children: [_newPlayerButton, _startGameButton]),
           ],
         ),
       );
 
-  MaterialButton get newPlayerButton => FlatButton(
+  MaterialButton get _newPlayerButton => FlatButton(
         onPressed: () => _showNewPlayerModal(),
         padding: UIConstants.mediumPadding,
         child: const Text('New player', style: UIConstants.buttonStyle),
       );
 
-  MaterialButton get startGameButton => RaisedButton(
-        onPressed: controller.isStartGamePossible ? () => controller.startGame() : null,
+  MaterialButton get _startGameButton => RaisedButton(
+        onPressed: controller.isStartGamePossible
+            ? () => controller.startGame()
+            : null,
         padding: UIConstants.mediumPadding,
         child: const Text('Start game', style: UIConstants.buttonStyle),
       );
@@ -82,13 +84,14 @@ class NewGamePageView extends ViewState<NewGamePage, NewGameController>
         );
       });
 
-  Widget _buildPlayerCard(PlayerEntity player) {
-    return SelectablePlayer(player, (bool state) {
-      controller.togglePlayerSelectState(player, state);
-      setState(() {});
-    });
-  }
+  /// Build a player card than can be picked.
+  Widget _buildPlayerCard(PlayerEntity player) =>
+      SelectablePlayer(player, (bool state) {
+        controller.togglePlayerSelectState(player, state);
+        setState(() {});
+      });
 
+  /// Show the modal used to create a new player.
   void _showNewPlayerModal() {
     showModalBottomSheet(
         context: context,
@@ -115,8 +118,7 @@ class NewGamePageView extends ViewState<NewGamePage, NewGameController>
                           padding: UIConstants.mediumPadding,
                           child: RaisedButton(
                             onPressed: () {
-                              if (controller.addPlayer())
-                                Navigator.pop(bc);
+                              if (controller.addPlayer()) Navigator.pop(bc);
                             },
                             padding: UIConstants.mediumPadding,
                             child: const Text('Add player',

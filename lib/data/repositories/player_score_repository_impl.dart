@@ -49,7 +49,7 @@ class PlayerScoreRepositoryImpl implements PlayerScoreRepository {
 
   @override
   Future<List<PlayerScoreEntity>> fromGameId(int gameId) async {
-    List<PlayerScoreDataEntity> playerScores = await _playerScoreBox
+    List<PlayerScoreDataEntity> playerScores = _playerScoreBox
         .query(PlayerScoreDataEntity_.gameId.equals(gameId))
         .build()
         .find();

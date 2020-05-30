@@ -20,7 +20,7 @@ class GameController extends Controller {
 
   /// PageView controller for all the player.
   PageController scorePagesController =
-  PageController(initialPage: 0, keepPage: true);
+      PageController(initialPage: 0, keepPage: true);
 
   /// Index of the current displayed page
   int scorePageIndex = 0;
@@ -45,9 +45,13 @@ class GameController extends Controller {
 
   /// Called when the user change his current score page.
   void pageChanged(int newPageIndex, bool needPageViewAnim) {
+    // Exit directly if we are on the right page
+    if(newPageIndex == scorePageIndex) return;
+    // Else perform the page change, with an animations if requested
     scorePageIndex = newPageIndex;
-    if (needPageViewAnim) scorePagesController.animateToPage(
-        newPageIndex, duration: Duration(milliseconds: 500), curve: Curves.ease);
+    if (needPageViewAnim)
+      scorePagesController.animateToPage(newPageIndex,
+          duration: Duration(milliseconds: 500), curve: Curves.ease);
     refreshUI();
   }
 }
